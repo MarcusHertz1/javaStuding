@@ -1,4 +1,4 @@
-package hw5;
+package code.hw5;
 
 /*
 Создайте и заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
@@ -16,10 +16,10 @@ public class AT4 {
         System.out.print("Enter array size:");
         int arraySize = num1.nextInt();
         //String answer = "No";
-        float[] nums = new float[arraySize];
+        int[] nums = new int[arraySize];
         //int a = arraySize /2 * -1 - 1;
         for(int i = 0; i < arraySize; i++){
-            nums[i] = (float) Math.random() * 100;
+            nums[i] = (int) (Math.random() * 100);
             //a += 1;
             System.out.print(nums[i] + " ");
         }
@@ -27,7 +27,7 @@ public class AT4 {
         float max = -1;
         float min = 1000;
         float sum =0;
-        for (int i = 1; i < arraySize; i++) {
+        for (int i = 0; i < arraySize; i++) {
             if (nums[i] > max) {
                 max = nums[i];
             }

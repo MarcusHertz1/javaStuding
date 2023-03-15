@@ -1,4 +1,4 @@
-package hw5;
+package code.hw5;
 
 /*
 Необходимо вывести на экран числа от 5 до 1.
@@ -7,9 +7,8 @@ package hw5;
 
 public class T2 {
     public static void main(String[] args) {
-        for(int i = 5;i > 0; i--) {
+        for (int i = 5; i > 0; i--) {
             System.out.print(i + " ");
-
         }
     }
 }

@@ -1,4 +1,4 @@
-package hw5;
+package code.hw5;
 
 /*
 За каждый месяц банк начисляет к сумме вклада 7% от суммы.
@@ -19,8 +19,8 @@ public class AT1 {
         int b = num1.nextInt();
         for(int i = 0;i < b; i++) {
             a *= 1.07;
-            System.out.print(a + " ");
         }
+        System.out.print(a + " ");
     }
 
 }

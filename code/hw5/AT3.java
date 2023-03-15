@@ -1,4 +1,4 @@
-package hw5;
+package code.hw5;
 
 /*
 Создайте массив целых чисел. Напишете программу, которая выводит
@@ -6,6 +6,7 @@ package hw5;
 Пусть число для поиска задается с консоли (класс Scanner).
 */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AT3 {
@@ -14,12 +15,13 @@ public class AT3 {
         int arraySize = 11;
         String answer = "No";
         int[] nums = new int[arraySize];
-        int a = arraySize /2 * -1 - 1;
+        int a = (arraySize-1) /2 * (- 1);
         for(int i = 0; i < arraySize; i++){
             nums[i] = a;
             a += 1;
-            //System.out.print(a + " ");
         }
+        System.out.print(Arrays.toString(nums));
+        System.out.println();
         System.out.print("Enter number:");
         int num = num1.nextInt();
         for(int i = 0; i < arraySize; i++){
