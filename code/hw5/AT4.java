@@ -12,15 +12,11 @@ import java.util.Scanner;
 public class AT4 {
     public static void main(String[] args) {
         Scanner num1 = new Scanner(System.in);
-        //int arraySize = 11;
         System.out.print("Enter array size:");
         int arraySize = num1.nextInt();
-        //String answer = "No";
         int[] nums = new int[arraySize];
-        //int a = arraySize /2 * -1 - 1;
         for(int i = 0; i < arraySize; i++){
             nums[i] = (int) (Math.random() * 100);
-            //a += 1;
             System.out.print(nums[i] + " ");
         }
         System.out.println();
