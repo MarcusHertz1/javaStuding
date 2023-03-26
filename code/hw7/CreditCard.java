@@ -1,31 +1,24 @@
 package code.hw7;
 
 public class CreditCard {
-    private int numberOfCard;
-    private String cardNumber;
-    private int val;
+    private final String cardNumber;
+    private int moneyAmount;
 
-    public CreditCard(int numberOfCard, String cardNumber, int val) {
-        setValues(numberOfCard, cardNumber, val);
-    }
-
-    public void setValues (int numberOfCard, String cardNumber, int val) {
-        this.numberOfCard = numberOfCard;
+    public CreditCard(String cardNumber, int moneyAmount) {
         this.cardNumber = cardNumber;
-        this.val = val;
+        this.moneyAmount = moneyAmount;
     }
 
     public String cardInfo () {
-        return "CC" + numberOfCard + "\n" + "Card number: " + cardNumber + "\n" + "Value: " + val + "\n";
+        return "Card number: " + cardNumber + "\n" + "Value: " + moneyAmount + "\n";
     }
 
-    public int moneyTransfer (int valMoneyTr) {
-        return 0;
+    public void moneyTransfer (int valMoneyTr) {
+        moneyAmount += valMoneyTr;
     }
 
-    /*public int cashWithdrawal (int valCardWd) {
-        int newValWd -= valCardWd;
-        return newValWd;
-    }*/
+    public void cashWithdrawal (int valCardWd) {
+        moneyAmount -= valCardWd;
+    }
 
 }

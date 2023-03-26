@@ -14,18 +14,33 @@ package code.hw7;
 Выведите на экран текущее состояние всех трех карточек.
 */
 
+import java.util.Scanner;
+
 public class T3 {
     public static void main(String[] args) {
-        CreditCard cc1 = new CreditCard(1, "1234 4562 7845 9632", 1523);
-        String cc1Info = cc1.cardInfo();
-        System.out.println(cc1Info);
+        Scanner num1 = new Scanner(System.in);
 
-        CreditCard cc2 = new CreditCard(2, "1894 4562 7845 9632", 568);
-        String cc2Info = cc2.cardInfo();
-        System.out.println(cc2Info);
+        CreditCard cc1 = new CreditCard("1234 4562 7845 9632", 1523);
+        System.out.println(cc1.cardInfo());
 
-        CreditCard cc3 = new CreditCard(3, "1984 4562 7845 9632", 4568);
-        String cc3Info = cc3.cardInfo();
-        System.out.println(cc3Info);
+        CreditCard cc2 = new CreditCard("1894 4562 7845 9632", 568);
+        System.out.println(cc2.cardInfo());
+
+        CreditCard cc3 = new CreditCard("1984 4562 7845 9632", 4568);
+        System.out.println(cc3.cardInfo());
+
+
+        System.out.print("Enter money amount for transfer on card 1: ");
+        cc1.moneyTransfer(num1.nextInt());
+
+        System.out.print("Enter money amount for transfer on card 2: ");
+        cc2.moneyTransfer(num1.nextInt());
+
+        System.out.print("Enter cash amount Withdrawal on card 3: ");
+        cc3.cashWithdrawal(num1.nextInt());
+
+        System.out.println(cc1.cardInfo());
+        System.out.println(cc2.cardInfo());
+        System.out.println(cc3.cardInfo());
     }
 }
